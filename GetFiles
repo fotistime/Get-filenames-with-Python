@@ -1,0 +1,16 @@
+import os
+#import pandas as pd
+
+
+folder_path = "yourfolder"
+
+file_paths = []
+
+for folder_name, subfolders, filenames in os.walk(folder_path):
+    for filename in filenames:
+        file_path = os.path.join(folder_name,"^" , filename)
+        file_paths.append(file_path)
+        
+      
+for file_path in file_paths:
+    print(file_path)
